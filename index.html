@@ -8,34 +8,48 @@
   </head>
   <body>
     <div class="container">
-      <h4>BMI Calculator</h4>
-      <hr />
-      <div class="form">
-        <div class="height">
-          <label for="height" name="height" value="height">Height : </label>
-          <input
-            type="text"
-            name="height"
-            id="height"
-            placeholder="Input your height"
-          />
-        </div>
+      <section class="form">
+        <h4>BMI Calculator</h4>
+        <hr />
+        <form id="form">
+          <div class="height">
+            <label for="height" name="height">Height :</label>
+            <input
+              type="number"
+              name="height"
+              id="height"
+              placeholder="Input your height"
+              required
+            />
+          </div>
 
-        <br />
-        <div class="weight">
-          <label for="weight" name="weight" value="weight">Weight : </label>
-          <input
-            type="text"
-            name="height"
-            id="weight"
-            placeholder="Input your weight"
-          />
-        </div>
+          <br />
+          <div class="weight">
+            <label for="weight" name="weight">Weight :</label>
+            <input
+              type="number"
+              name="height"
+              id="weight"
+              placeholder="Input your weight"
+              required
+            />
+          </div>
+        </form>
         <div class="button">
-          <button class="reset">Reset</button>
-          <button class="submit">Submit</button>
+          <button type="button" onclick="calculateBMI()">Submit</button>
+          <button type="button" onclick="resetForm()">Reset</button>
         </div>
-      </div>
+      </section>
+
+      <hr />
+      <section class="result">
+        <h4>Result</h4>
+        <div class="form-result">
+          <p id="category"></p>
+          <p id="result"></p>
+          <img src="" />
+        </div>
+      </section>        
     </div>
     <script src="/js/script.js"></script>
   </body>
