@@ -130,41 +130,38 @@ body {
 }
 
 /* Phone */
-@media (max-width : 400px) {
-    html {
-        font-size: 75%;
-    }
-    .container {
-        /* height: 300px; */
-
-    }
-    .container #form {
-       /* background-color: var(--primary); */
-       padding: 0 10px ;
-       /* padding-left: 10px;
+@media (max-width: 400px) {
+  html {
+    font-size: 75%;
+  }
+  .container {
+    /* height: 300px; */
+  }
+  .container #form {
+    /* background-color: var(--primary); */
+    padding: 0 10px;
+    /* padding-left: 10px;
        padding-right: 10px; */
-    }
-    .container .button {
-        /* margin-top: -1rem; */
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 10rem;
-        padding-left: 10px;
-        /* display: block; */
-      }
+  }
+  .container .button {
+    /* margin-top: -1rem; */
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10rem;
+    padding-left: 10px;
+    /* display: block; */
+  }
 
-      .height input[type="number"] {
-        margin-left: 0;
-      }
+  .height input[type="number"] {
+    margin-left: 0;
+  }
 
-      .height {
-        margin-bottom: -1rem;
-        size: 70%;
-      }
+  .height {
+    margin-bottom: -1rem;
+    size: 70%;
+  }
 
-      .weight {
-        margin-bottom: 2rem;
-      }
-      
+  .weight {
+    margin-bottom: 2rem;
+  }
 }
- 
