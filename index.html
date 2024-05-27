@@ -36,8 +36,8 @@
           </div>
         </form>
         <div class="button">
-          <button type="button" onclick="calculateBMI()">Submit</button>
-          <button type="button" onclick="resetForm()">Reset</button>
+          <button type="button" id="reset" onclick="resetForm()">Reset</button>
+          <button type="button" id="submit" onclick="calculateBMI()">Submit</button>
         </div>
       </section>
 
@@ -45,9 +45,10 @@
       <section class="result">
         <h4>Result</h4>
         <div class="form-result">
-          <p id="category"></p>
           <p id="result"></p>
-          <img src="" />
+          <div class="pictures">
+            <img src="" alt=""/>
+          </div>
         </div>
       </section>        
     </div>
