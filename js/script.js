@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+const result = document.querySelector('.result')
+result.style.display = 'none';
 
 function calculateBMI(){
     const height = document.getElementById('height').value/100;
@@ -22,6 +24,7 @@ function calculateBMI(){
     } else {
         document.getElementById('result').innerHTML = 'Input required.';
     }
+    result.style.display = '';
     container.style.height = '395px';
     return;
 }
