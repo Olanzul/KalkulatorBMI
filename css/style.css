@@ -129,17 +129,28 @@ body {
   width: 20%;
 }
 
+.fadeIn{
+  animation: 0.5s fadeIn forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      scale: 1;
+      opacity: 1;
+  }
+}
+
 /* Phone */
 @media (max-width: 400px) {
   html {
     font-size: 75%;
   }
   .container {
-    /* height: 300px; */
+    height: 190px;
   }
   .container #form {
     /* background-color: var(--primary); */
-    padding: 0 10px;
+    padding: 10px 10px;
     /* padding-left: 10px;
        padding-right: 10px; */
   }
@@ -147,13 +158,15 @@ body {
     /* margin-top: -1rem; */
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 10rem;
-    padding-left: 10px;
+    /* margin-bottom: 10rem; */
+    padding-left: 100px;
     /* display: block; */
-  }
+}
 
-  .height input[type="number"] {
-    margin-left: 0;
+.container button{
+    height: 30px;
+    width: 80px;
+
   }
 
   .height {
@@ -162,6 +175,6 @@ body {
   }
 
   .weight {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 }

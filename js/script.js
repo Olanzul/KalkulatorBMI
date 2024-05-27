@@ -24,8 +24,9 @@ function calculateBMI(){
     } else {
         document.getElementById('result').innerHTML = 'Input required.';
     }
-    result.style.display = '';
-    container.style.height = '395px';
+    result.style.display = 'block';
+    result.classList.add('fadeIn');
+    container.style.height = '400px';
     return;
 }
 
