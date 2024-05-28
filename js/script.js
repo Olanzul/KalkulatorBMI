@@ -1,6 +1,23 @@
 const container = document.querySelector('.container');
 const result = document.querySelector('.result')
-result.style.display = 'none';
+const submit = document.querySelector('#submit');
+submit.disabled = true;
+
+const form = document.querySelector('#form');
+
+form.addEventListener('keyup', function(){
+    for (let i = 0; i < form.elements.length; i++){
+        if (form.elements[i].value.length !==0) {
+            submit.classList.remove('disabled');
+            submit.classList.add('disabled');
+        } else {
+            return false;
+        }
+    }
+    submit.disabled = false;
+    submit.classList.remove('disabled');
+});
+
 
 function calculateBMI(){
     const height = document.getElementById('height').value/100;
@@ -22,7 +39,9 @@ function calculateBMI(){
         }
         document.getElementById('result').innerHTML = 'Your BMI is : ' + bmi + ' (' + category + ')'; 
     } else {
-        document.getElementById('result').innerHTML = 'Input required.';
+        // document.getElementById('result').innerHTML = 'Input required.';
+        alert('Input Required');
+        submit.classList.add('disabled');
     }
     result.style.display = 'block';
     result.classList.add('fadeIn');
@@ -33,6 +52,9 @@ function calculateBMI(){
 function resetForm() {
     document.getElementById('form').reset();
     document.getElementById('result').innerHTML = '';
-    container.style.height = '240' ;
-    return;
+    result.disabled = true;
+    submit.disabled = true;
+    submit.classList.add('disabled');
+    // return container;
+    container.style.height = '240px';
 }
