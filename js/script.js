@@ -5,6 +5,7 @@ submit.disabled = true;
 
 const form = document.querySelector('#form');
 
+// disabling submit button
 form.addEventListener('keyup', function(){
     for (let i = 0; i < form.elements.length; i++){
         if (form.elements[i].value.length !==0) {
@@ -18,7 +19,7 @@ form.addEventListener('keyup', function(){
     submit.classList.remove('disabled');
 });
 
-
+// submit button
 function calculateBMI(){
     const height = document.getElementById('height').value/100;
     const weight = document.getElementById('weight').value;
@@ -39,8 +40,6 @@ function calculateBMI(){
         }
         document.getElementById('result').innerHTML = 'Your BMI is : ' + bmi + ' (' + category + ')'; 
     } else {
-        // document.getElementById('result').innerHTML = 'Input required.';
-        alert('Input Required');
         submit.classList.add('disabled');
     }
     result.style.display = 'block';
@@ -49,12 +48,12 @@ function calculateBMI(){
     return;
 }
 
+// reset button
 function resetForm() {
     document.getElementById('form').reset();
     document.getElementById('result').innerHTML = '';
     result.disabled = true;
     submit.disabled = true;
     submit.classList.add('disabled');
-    // return container;
     container.style.height = '240px';
 }
